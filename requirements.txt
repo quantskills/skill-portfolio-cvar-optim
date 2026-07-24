@@ -1,0 +1,15 @@
+# 数据处理
+pandas>=2.0
+numpy>=1.24
+
+# 优化求解与极值理论：linprog(CVaR-LP) + stats.genpareto(EVT/GPD 拟合)
+scipy>=1.10
+
+# 数据源 SDK（需配置 PANDA_DATA_USERNAME / PANDA_DATA_PASSWORD）
+panda_data
+
+# 报告可视化（scripts/report.py, analysis_report.py）
+matplotlib>=3.7
+
+# pyarrow 读旧版 parquet 文件的 fallback 引擎（离线 fixture 兼容）
+fastparquet

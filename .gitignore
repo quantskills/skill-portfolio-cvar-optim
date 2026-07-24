@@ -1,0 +1,87 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+venv/
+ENV/
+env/
+.venv
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Environment variables (contains sensitive API keys)
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+logs/
+
+# Data files and directories (large data files)
+*.csv
+*.parquet
+*.h5
+*.hdf5
+白糖后复权数据/
+白糖持仓数据/
+K线图/
+
+# Screenshots and temporary files
+*.png
+*.jpg
+*.jpeg
+screen.png
+
+# OS
+.DS_Store
+Thumbs.db
+*.tmp
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb
+
+# pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# MyPy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+/node_modules/
+
+# 报告生成产物（HTML / JSON 不入 git，避免大文件污染仓库）
+reports/
+
+# 本地数据缓存不入 git（cache_*.parquet），但 fixture 样本入 git 保证可复现
+scripts/fixtures/cache_*.parquet
+!scripts/fixtures/sample_*.parquet
