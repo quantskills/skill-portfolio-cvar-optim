@@ -13,3 +13,6 @@ matplotlib>=3.7
 
 # pyarrow 读旧版 parquet 文件的 fallback 引擎（离线 fixture 兼容）
 fastparquet
+
+# 测试（scripts/test_edge.py 边界回归，pytest 自动发现 test_*.py）
+pytest>=7.0

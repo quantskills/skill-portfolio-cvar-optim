@@ -43,7 +43,9 @@ This Skill pulls A-share stock pool (`get_stock_daily`) and benchmark index (`ge
 | `scripts/backtest.py` | Out-of-sample backtest (CVaR/annualized/MDD + equal-weight/benchmark comparison) |
 | `scripts/backtest_report_data.py` | Backtest timeseries wrapper (HTML report data source) |
 | `scripts/report.py` | HTML report generator entry (matplotlib static charts, 4 charts + 8 metric cards) |
-| `scripts/save_fixture.py` | One-time offline fixture generator (stocks + index) |
+| `scripts/save_fixture.py` | One-time offline fixture generator (stocks + index, pulls real data online) |
+| `scripts/_make_synthetic_fixture.py` | Synthetic fixture generator (no credentials, RandomState=42 bootstrap) |
+| `scripts/test_edge.py` | Edge-case regression tests (LP relax / EVT trigger / determinism, pytest) |
 | `scripts/analysis_report.py` | Parameter-sweep deep analysis (target return / β → efficient frontier) |
 | `scripts/fixtures/` | Offline test data (Parquet format) |
 | `requirements.txt` | Python dependencies |
@@ -69,8 +71,11 @@ skill-portfolio-cvar-optim/
 │   ├── backtest.py                # Out-of-sample (CVaR/VaR/annualized/MDD/Calmar + equal-weight/benchmark)
 │   ├── backtest_report_data.py    # Timeseries wrapper (curve / drawdown / loss_hist)
 │   ├── report.py                  # HTML report (4 charts + 8 metric cards + 3-way comparison)
-│   ├── save_fixture.py            # Offline fixture generator
+│   ├── save_fixture.py            # Offline fixture generator (real data)
+│   ├── _make_synthetic_fixture.py # Synthetic fixture (credential-free bootstrap, RandomState=42)
 │   ├── analysis_report.py         # Parameter sweep + CVaR-return efficient frontier
+│   ├── test_edge.py               # Edge-case regression (pytest)
+│   ├── conftest.py                # pytest config (offline default + stub injection)
 │   └── fixtures/
 │       ├── sample_stocks.parquet  # Offline stock data
 │       └── sample_index.parquet   # Offline index data

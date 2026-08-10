@@ -45,7 +45,9 @@
 | `scripts/backtest.py` | 样本外回测（CVaR/年化/MDD + 等权/benchmark 对比） |
 | `scripts/backtest_report_data.py` | 回测时序数据包装层（HTML 报告数据源） |
 | `scripts/report.py` | HTML 报告生成入口（matplotlib 静态图，4 图 + 8 指标卡） |
-| `scripts/save_fixture.py` | 一次性生成离线测试 fixture（股票 + 指数） |
+| `scripts/save_fixture.py` | 一次性生成离线测试 fixture（股票 + 指数，联网拉真实数据） |
+| `scripts/_make_synthetic_fixture.py` | 合成 fixture 生成器（无需联网，RandomState=42 自举） |
+| `scripts/test_edge.py` | 边界回归测试（LP 降级 / EVT 触发 / 确定性，pytest） |
 | `scripts/analysis_report.py` | 参数扫描深度分析（目标收益 / β → 有效前沿） |
 | `scripts/fixtures/` | 离线测试数据（Parquet 格式） |
 | `requirements.txt` | Python 依赖清单 |
@@ -70,8 +72,11 @@ skill-portfolio-cvar-optim/
 │   ├── backtest.py                # 样本外回测（CVaR/VaR/年化/MDD/Calmar + 等权/benchmark）
 │   ├── backtest_report_data.py    # 回测时序数据包装层（保留 curve / drawdown / loss_hist）
 │   ├── report.py                  # HTML 报告（4 图 + 8 指标卡 + 三方对比 + 权重明细）
-│   ├── save_fixture.py            # 生成离线 fixture
+│   ├── save_fixture.py            # 生成离线 fixture（联网真实数据）
+│   ├── _make_synthetic_fixture.py # 合成 fixture（无凭证自举，RandomState=42）
 │   ├── analysis_report.py         # 参数扫描 + CVaR-收益有效前沿
+│   ├── test_edge.py               # 边界回归测试（pytest）
+│   ├── conftest.py                # pytest 配置（默认离线 + stub 注入）
 │   └── fixtures/
 │       ├── sample_stocks.parquet  # 离线股票数据
 │       └── sample_index.parquet   # 离线指数数据
