@@ -121,3 +121,6 @@ Portfolio-level metrics: CVaR95 / VaR95 / expected annualized / target return / 
 ## License
 
 [GPL-3.0](LICENSE) © 2026 PandaTest
+
+
+Pandadata compatibility maintenance: [abgyjaguo](https://github.com/abgyjaguo). Existing authorship is retained.

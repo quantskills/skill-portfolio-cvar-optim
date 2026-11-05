@@ -276,3 +276,7 @@ python scripts/analysis_report.py --beta 0.99 --start 2024-01-01 --end 2026-07-0
 - panda-data（数据源 SDK）
 - matplotlib（HTML 报告，`report.py` / `analysis_report.py`）
 - fastparquet（pyarrow 与旧版 parquet 不兼容时的 fallback 引擎）
+
+## Pandadata compatibility
+
+[Pandadata 1.0.6 compatibility](references/pandadata-compatibility.md) — exact SDK baseline, validation scope, and shared guidance for all supported agent runtimes.
