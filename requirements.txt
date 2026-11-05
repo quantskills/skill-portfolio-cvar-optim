@@ -6,8 +6,7 @@ numpy>=1.24
 scipy>=1.10
 
 # 数据源 SDK（需配置 PANDA_DATA_USERNAME / PANDA_DATA_PASSWORD）
-panda_data
-
+panda_data==1.0.6
 # 报告可视化（scripts/report.py, analysis_report.py）
 matplotlib>=3.7
 
